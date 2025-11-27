@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import ClubLogo from '@/components/ClubLogo';
 
 type League = 'RPL' | 'FNL';
 
@@ -204,11 +205,9 @@ const Index = () => {
                   onClick={() => setSelectedClub(club)}
                 >
                   <div className="text-center">
-                    <img 
-                      src={club.logo} 
-                      alt={club.name}
-                      className="w-20 h-20 mx-auto mb-3 object-contain"
-                    />
+                    <div className="flex justify-center mb-3">
+                      <ClubLogo clubName={club.name} size={80} />
+                    </div>
                     <h3 className="font-semibold text-lg">{club.name}</h3>
                   </div>
                 </Card>

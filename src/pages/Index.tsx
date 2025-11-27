@@ -57,44 +57,105 @@ const clubs: Club[] = [
 ];
 
 const players: Player[] = [
-  {
-    id: '1',
-    name: 'Промес',
-    number: 7,
-    clubId: '1',
-    penalties: [
-      { zone: 1, scored: true },
-      { zone: 3, scored: true },
-      { zone: 9, scored: false },
-      { zone: 7, scored: true },
-      { zone: 1, scored: true },
-    ],
-  },
-  {
-    id: '2',
-    name: 'Захарян',
-    number: 10,
-    clubId: '2',
-    penalties: [
-      { zone: 9, scored: true },
-      { zone: 3, scored: true },
-      { zone: 7, scored: false },
-      { zone: 1, scored: true },
-    ],
-  },
-  {
-    id: '3',
-    name: 'Азмун',
-    number: 9,
-    clubId: '3',
-    penalties: [
-      { zone: 7, scored: true },
-      { zone: 9, scored: true },
-      { zone: 3, scored: true },
-      { zone: 7, scored: true },
-      { zone: 1, scored: false },
-    ],
-  },
+  { id: '1', name: 'Клаудиньо', number: 7, clubId: '1', penalties: [{ zone: 1, scored: true }, { zone: 3, scored: true }, { zone: 9, scored: true }, { zone: 1, scored: true }, { zone: 7, scored: true }] },
+  { id: '2', name: 'Вендел', number: 22, clubId: '1', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: false }, { zone: 7, scored: true }] },
+  { id: '3', name: 'Мостовой', number: 19, clubId: '1', penalties: [{ zone: 9, scored: true }, { zone: 1, scored: true }, { zone: 3, scored: true }] },
+  
+  { id: '4', name: 'Кордоба', number: 9, clubId: '2', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 1, scored: true }, { zone: 9, scored: true }, { zone: 7, scored: false }] },
+  { id: '5', name: 'Козлов', number: 16, clubId: '2', penalties: [{ zone: 3, scored: true }, { zone: 1, scored: true }, { zone: 9, scored: true }] },
+  { id: '6', name: 'Мамаев', number: 8, clubId: '2', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: false }, { zone: 1, scored: true }] },
+
+  { id: '7', name: 'Смолов', number: 9, clubId: '3', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }, { zone: 9, scored: true }, { zone: 7, scored: false }, { zone: 1, scored: true }] },
+  { id: '8', name: 'Батраков', number: 19, clubId: '3', penalties: [{ zone: 1, scored: true }, { zone: 3, scored: true }, { zone: 9, scored: true }] },
+  { id: '9', name: 'Гржибовски', number: 17, clubId: '3', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: false }] },
+
+  { id: '10', name: 'Фомин', number: 6, clubId: '4', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }, { zone: 1, scored: true }, { zone: 7, scored: true }] },
+  { id: '11', name: 'Захарян', number: 11, clubId: '4', penalties: [{ zone: 9, scored: true }, { zone: 3, scored: true }, { zone: 7, scored: true }, { zone: 9, scored: false }] },
+  { id: '12', name: 'Макаров', number: 99, clubId: '4', penalties: [{ zone: 1, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }] },
+
+  { id: '13', name: 'Промес', number: 7, clubId: '5', penalties: [{ zone: 1, scored: true }, { zone: 3, scored: true }, { zone: 9, scored: false }, { zone: 7, scored: true }, { zone: 1, scored: true }] },
+  { id: '14', name: 'Угальде', number: 9, clubId: '5', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }, { zone: 9, scored: true }] },
+  { id: '15', name: 'Мантуан', number: 14, clubId: '5', penalties: [{ zone: 7, scored: true }, { zone: 1, scored: true }] },
+
+  { id: '16', name: 'Чалов', number: 11, clubId: '6', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: false }, { zone: 1, scored: true }, { zone: 9, scored: true }] },
+  { id: '17', name: 'Обляков', number: 20, clubId: '6', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }] },
+  { id: '18', name: 'Бистрович', number: 14, clubId: '6', penalties: [{ zone: 1, scored: true }, { zone: 7, scored: false }] },
+
+  { id: '19', name: 'Джаа', number: 7, clubId: '7', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }, { zone: 7, scored: true }] },
+  { id: '20', name: 'Кайоде', number: 9, clubId: '7', penalties: [{ zone: 9, scored: true }, { zone: 1, scored: true }, { zone: 7, scored: false }] },
+  { id: '21', name: 'Глушенков', number: 24, clubId: '7', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '22', name: 'Комличенко', number: 9, clubId: '8', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }, { zone: 1, scored: false }] },
+  { id: '23', name: 'Голенков', number: 10, clubId: '8', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }] },
+  { id: '24', name: 'Шаперев', number: 17, clubId: '8', penalties: [{ zone: 1, scored: true }, { zone: 7, scored: true }] },
+
+  { id: '25', name: 'Уремович', number: 5, clubId: '9', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 1, scored: true }] },
+  { id: '26', name: 'Костюков', number: 19, clubId: '9', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: false }, { zone: 3, scored: true }] },
+  { id: '27', name: 'Байрамян', number: 7, clubId: '9', penalties: [{ zone: 1, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '28', name: 'Сергеев', number: 9, clubId: '10', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }, { zone: 7, scored: true }, { zone: 1, scored: false }] },
+  { id: '29', name: 'Мелешко', number: 11, clubId: '10', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }] },
+  { id: '30', name: 'Бибиков', number: 27, clubId: '10', penalties: [{ zone: 1, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '31', name: 'Шешуков', number: 10, clubId: '11', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: false }, { zone: 1, scored: true }] },
+  { id: '32', name: 'Апаленко', number: 7, clubId: '11', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }] },
+  { id: '33', name: 'Шутов', number: 19, clubId: '11', penalties: [{ zone: 1, scored: true }, { zone: 7, scored: true }] },
+
+  { id: '34', name: 'Ломакин', number: 10, clubId: '12', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }] },
+  { id: '35', name: 'Гашич', number: 9, clubId: '12', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: false }, { zone: 1, scored: true }] },
+  { id: '36', name: 'Пинто', number: 8, clubId: '12', penalties: [{ zone: 7, scored: true }, { zone: 3, scored: true }] },
+
+  { id: '37', name: 'Бебе', number: 11, clubId: '13', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }, { zone: 1, scored: false }] },
+  { id: '38', name: 'Лучкевич', number: 99, clubId: '13', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }] },
+  { id: '39', name: 'Ботуа', number: 20, clubId: '13', penalties: [{ zone: 1, scored: true }, { zone: 7, scored: true }] },
+
+  { id: '40', name: 'Кокорин', number: 9, clubId: '14', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }, { zone: 7, scored: false }, { zone: 1, scored: true }] },
+  { id: '41', name: 'Еременко', number: 10, clubId: '14', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }] },
+  { id: '42', name: 'Пиманов', number: 17, clubId: '14', penalties: [{ zone: 1, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '43', name: 'Алексеев', number: 9, clubId: '15', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }] },
+  { id: '44', name: 'Мамедов', number: 10, clubId: '15', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: false }, { zone: 1, scored: true }] },
+  { id: '45', name: 'Катенин', number: 11, clubId: '15', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '46', name: 'Комличенко', number: 19, clubId: '16', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: false }] },
+  { id: '47', name: 'Зотов', number: 7, clubId: '16', penalties: [{ zone: 1, scored: true }, { zone: 9, scored: true }, { zone: 7, scored: true }] },
+  { id: '48', name: 'Коваленко', number: 8, clubId: '16', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '49', name: 'Базелян', number: 9, clubId: '17', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }] },
+  { id: '50', name: 'Гацкан', number: 10, clubId: '17', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: false }] },
+  
+  { id: '51', name: 'Корян', number: 11, clubId: '18', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }, { zone: 7, scored: true }] },
+  { id: '52', name: 'Суслов', number: 7, clubId: '18', penalties: [{ zone: 1, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '53', name: 'Мурнин', number: 9, clubId: '19', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }] },
+  { id: '54', name: 'Паляница', number: 10, clubId: '19', penalties: [{ zone: 3, scored: true }, { zone: 1, scored: true }] },
+
+  { id: '55', name: 'Паваренич', number: 9, clubId: '20', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: false }] },
+  { id: '56', name: 'Цыбульник', number: 17, clubId: '20', penalties: [{ zone: 1, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '57', name: 'Демьяненко', number: 10, clubId: '21', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }] },
+  { id: '58', name: 'Богомольский', number: 11, clubId: '21', penalties: [{ zone: 3, scored: true }, { zone: 1, scored: true }] },
+
+  { id: '59', name: 'Седов', number: 7, clubId: '22', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }, { zone: 3, scored: true }] },
+  { id: '60', name: 'Калимуллин', number: 10, clubId: '22', penalties: [{ zone: 9, scored: true }, { zone: 1, scored: false }] },
+
+  { id: '61', name: 'Воротников', number: 9, clubId: '23', penalties: [{ zone: 3, scored: true }, { zone: 9, scored: true }] },
+  { id: '62', name: 'Саркисов', number: 10, clubId: '23', penalties: [{ zone: 7, scored: true }, { zone: 1, scored: true }] },
+
+  { id: '63', name: 'Иванов', number: 9, clubId: '24', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: true }] },
+  { id: '64', name: 'Смирнов', number: 10, clubId: '24', penalties: [{ zone: 1, scored: true }, { zone: 9, scored: false }] },
+
+  { id: '65', name: 'Мещеряков', number: 11, clubId: '25', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }] },
+  { id: '66', name: 'Панченко', number: 7, clubId: '25', penalties: [{ zone: 3, scored: true }, { zone: 1, scored: true }] },
+
+  { id: '67', name: 'Заболотный', number: 9, clubId: '26', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: true }, { zone: 3, scored: false }] },
+  { id: '68', name: 'Петров', number: 10, clubId: '26', penalties: [{ zone: 1, scored: true }, { zone: 9, scored: true }] },
+
+  { id: '69', name: 'Сидоренко', number: 7, clubId: '27', penalties: [{ zone: 7, scored: true }, { zone: 9, scored: true }] },
+  { id: '70', name: 'Романов', number: 11, clubId: '27', penalties: [{ zone: 3, scored: true }, { zone: 1, scored: true }] },
+
+  { id: '71', name: 'Николаев', number: 9, clubId: '28', penalties: [{ zone: 9, scored: true }, { zone: 7, scored: false }] },
+  { id: '72', name: 'Федоров', number: 10, clubId: '28', penalties: [{ zone: 3, scored: true }, { zone: 1, scored: true }] },
 ];
 
 const Index = () => {

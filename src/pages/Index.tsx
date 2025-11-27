@@ -25,14 +25,31 @@ interface Player {
 }
 
 const clubs: Club[] = [
-  { id: '1', name: 'Спартак', league: 'RPL', logo: '🔴' },
-  { id: '2', name: 'ЦСКА', league: 'RPL', logo: '🔵' },
-  { id: '3', name: 'Зенит', league: 'RPL', logo: '⚪' },
-  { id: '4', name: 'Динамо', league: 'RPL', logo: '🔷' },
-  { id: '5', name: 'Локомотив', league: 'RPL', logo: '🔴' },
-  { id: '6', name: 'Краснодар', league: 'RPL', logo: '🟢' },
-  { id: '7', name: 'Ротор', league: 'FNL', logo: '🟡' },
-  { id: '8', name: 'Балтика', league: 'FNL', logo: '🔵' },
+  { id: '1', name: 'Спартак', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/b/bc/FC_Spartak_Moscow_Logo.png' },
+  { id: '2', name: 'ЦСКА', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/d/d4/PFC_CSKA_Moscow_%28logo%2C_2023%29.png' },
+  { id: '3', name: 'Зенит', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/f/f7/FC_Zenit_1_star_2022_logo.png' },
+  { id: '4', name: 'Динамо', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/5/54/Dynamo_Moscow_Logo.png' },
+  { id: '5', name: 'Локомотив', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/e/e5/FC_Lokomotiv_Moscow_logo.png' },
+  { id: '6', name: 'Краснодар', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/a/af/FC_Krasnodar_Logo.png' },
+  { id: '7', name: 'Ахмат', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/8/8b/FC_Akhmat_Grozny_logo.png' },
+  { id: '8', name: 'Крылья Советов', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/9/94/FC_Krylia_Sovetov_Samara_logo.png' },
+  { id: '9', name: 'Рубин', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/b/b0/FC_Rubin_Kazan_logo.png' },
+  { id: '10', name: 'Ростов', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/a/ac/FC_Rostov_logo.png' },
+  { id: '11', name: 'Сочи', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/4/47/FC_Sochi_logo.png' },
+  { id: '12', name: 'Оренбург', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/4/40/FC_Orenburg_logo.png' },
+  { id: '13', name: 'Факел', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/d/d6/FC_Fakel_Voronezh_logo.png' },
+  { id: '14', name: 'Химки', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/4/46/FK_Khimki_logo.png' },
+  { id: '15', name: 'Акрон', league: 'RPL', logo: 'https://upload.wikimedia.org/wikipedia/ru/1/19/FC_Akron_Togliatti_logo.png' },
+  { id: '16', name: 'Балтика', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/5/50/FC_Baltika_Kaliningrad_logo.png' },
+  { id: '17', name: 'Ротор', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/0/00/FC_Rotor_Volgograd_logo.png' },
+  { id: '18', name: 'Родина', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/c/c3/FC_Rodina_Moscow_logo.png' },
+  { id: '19', name: 'Алания', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/5/59/FC_Alania_Vladikavkaz_logo.png' },
+  { id: '20', name: 'Чайка', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/b/b3/FC_Chayka_Peschanokopskoye_logo.png' },
+  { id: '21', name: 'СКА-Хабаровск', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/3/32/FC_SKA-Khabarovsk_logo.png' },
+  { id: '22', name: 'Енисей', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/c/cb/FC_Yenisey_Krasnoyarsk_logo.png' },
+  { id: '23', name: 'Арсенал', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/6/64/FC_Arsenal_Tula_logo.png' },
+  { id: '24', name: 'Нефтехимик', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/5/56/FC_Neftekhimik_Nizhnekamsk_logo.png' },
+  { id: '25', name: 'Камаз', league: 'FNL', logo: 'https://upload.wikimedia.org/wikipedia/ru/4/43/FC_KAMAZ_Naberezhnye_Chelny_logo.png' },
 ];
 
 const players: Player[] = [
@@ -187,7 +204,11 @@ const Index = () => {
                   onClick={() => setSelectedClub(club)}
                 >
                   <div className="text-center">
-                    <div className="text-5xl mb-3">{club.logo}</div>
+                    <img 
+                      src={club.logo} 
+                      alt={club.name}
+                      className="w-20 h-20 mx-auto mb-3 object-contain"
+                    />
                     <h3 className="font-semibold text-lg">{club.name}</h3>
                   </div>
                 </Card>
